@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
+  "version": "1.0.1",
+  "version_name": "1.0.1",
+  "icons": {
+    "16": "src/assets/images/icon16.png",
+    "32": "src/assets/images/icon32.png",
+    "48": "src/assets/images/icon48.png",
+    "128": "src/assets/images/icon128.png"
+  },
+  "action": {
+    "default_popup": "src/action-page/action-page.html",
+    "default_icon": {
+      "16": "src/assets/images/icon16.png",
+      "32": "src/assets/images/icon32.png",
+      "48": "src/assets/images/icon48.png",
+      "128": "src/assets/images/icon128.png"
+    }
+  },
+  "minimum_chrome_version": "103",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://warpcast.com/*"
+      ],
+      "all_frames": true,
+      "run_at": "document_start",
+      "js": ["src/client/content.ts"]
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": [
+        "src/client/inject.js"
+    ],
+    "matches": [ "https://warpcast.com/*"]
+  }],
+  "permissions": ["storage", "notifications", "tabs", "activeTab", "scripting"],
+  "background": {
+    "service_worker": "/src/service-worker.ts",
+    "type": "module"
+  }
+}
