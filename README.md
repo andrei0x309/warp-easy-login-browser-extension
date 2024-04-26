@@ -4,7 +4,7 @@ This extension allows you to sign in to warpcast.com without having to use a mob
 
 Download from Chrome-Store:
 
-[https://example.com](Link to be added)
+[https://chromewebstore.google.com/detail/warp-easy-login/bbjcdcdpmhmenjadgdkkkabhajfeefak](https://chromewebstore.google.com/detail/warp-easy-login/bbjcdcdpmhmenjadgdkkkabhajfeefak)
 
 ### Screenshot
 
